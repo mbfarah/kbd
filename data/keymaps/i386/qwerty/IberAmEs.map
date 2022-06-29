@@ -1,0 +1,313 @@
+# IberAmEs.map: Iberoamerican Spanish supranational layout.
+# By: Miguel Farah <miguel@farah.cl>
+# Layout's reference site: https://www.farah.cl/DistribucionesDeTeclado/IberAmEs/
+# WIP version: 0.2.
+#
+keymaps 0-12
+alt_is_meta
+# include "linux-with-alt-and-altgr"
+# include "compose"
+# include "compose.latin1"
+strings as usual
+
+keycode   1 = Escape
+
+
+#############   normal          Shift           AltGr           AltGr-Shift
+
+# Row 1: numbers.
+
+keycode  41 =   apostrophe      quotedbl        grave           notsign
+keycode   2 =   one             less            U+2264          U+00B9
+keycode   3 =   two             greater         U+2265          U+00B2
+keycode   4 =   three           numbersign      at              U+00B3
+keycode   5 =   four            dollar          sterling        VoidSymbol # dead money 1
+keycode   6 =   five            percent         U+20AC          U+2030
+keycode   7 =   six             ampersand       yen             VoidSymbol # dead money 2
+keycode   8 =   seven           asciicircum     degree          VoidSymbol
+            altgr control keycode   8 = Control_asciicircum
+keycode   9 =   eight           parenleft       periodcentered  asciitilde
+keycode  10 =   nine            parenright      bar             U+2016
+keycode  11 =   zero            equal           U+2260          U+221E
+keycode  12 =   question        questiondown    ordfeminine     U+266A
+keycode  13 =   exclam          exclamdown      masculine       U+266B
+
+keycode  14 = Delete
+    control keycode  14 = BackSpace
+    alt     keycode  14 = Meta_BackSpace
+
+
+# Row 2: qwerty.
+
+keycode  15 =   Tab             Meta_Tab
+
+keycode  16 =  +q              +Q               braceleft       U+2717
+keycode  17 =  +w              +W               braceright      U+2713
+keycode  18 =  +e              +E              +U+1EBD         +U+1EBC
+keycode  19 =  +r              +R               U+2014          U+2013
+keycode  20 =  +t              +T              +U+A78C         +U+A78B
+keycode  21 =  +y              +Y              +U+1EF9         +U+1EF8
+keycode  22 =  +u              +U              +U+0169         +U+0168
+keycode  23 =  +i              +I              +U+0129         +U+0128
+keycode  24 =  +o              +O              +U+00F5         +U+00D5
+keycode  25 =  +p              +P               U+00B6          U+2026
+keycode  26 =   dead_grave      dead_circumflex bracketleft     VoidSymbol # dead_caron
+keycode  27 =   plus            asterisk        bracketright    plusminus
+            altgr control keycode  27 = Control_backslash
+
+keycode  28 = Return
+    alt keycode  28 = Meta_Control_m
+
+
+# Row 3: asdfgh.
+
+keycode  58 = Caps_Lock
+
+keycode  30 =  +a              +A              +U+000E3        +U+00C3
+keycode  31 =  +s              +S               U+00A7          U+017F
+keycode  32 =  +d              +D               U+2020          U+2021
+keycode  33 =  +f              +F               VoidSymbol      VoidSymbol # dead latin 1, 2
+keycode  34 =  +g              +G               VoidSymbol      VoidSymbol # +gtilde/+Gtilde: g/G plus U+0303
+keycode  35 =  +h              +H              +U+1E25         +U+1E24
+keycode  36 =  +j              +J              +U+00E6         +U+00C6
+keycode  37 =  +k              +K              +U+0153         +U+0152
+keycode  38 =  +l              +L              +U+1E37         +U+1E36
+keycode  39 =  +ntilde         +Ntilde          dead_tilde      U+25CC
+keycode  40 =   dead_acute      dead_diaeresis  U+00D7          VoidSymbol # dead_ring
+keycode  43 =   slash           backslash       U+00F7          VoidSymbol # dead_cedilla
+            altgr control keycode  43 = Control_backslash
+
+
+# Row 4: zxcvbn.
+
+keycode  86 =   periodcentered  bar             asciitilde      U+2016
+keycode  44 =  +z              +Z               guillemotleft   U+2039
+keycode  45 =  +x              +X               guillemotright  U+203A
+keycode  46 =  +c              +C              +ccedilla       +Ccedilla
+keycode  47 =  +v              +V               U+2018          U+201C
+keycode  48 =  +b              +B               U+2019          U+201D
+keycode  49 =  +n              +N              +ntilde         +Ntilde
+keycode  50 =  +m              +M               VoidSymbol      VoidSymbol # # dead misc.,   Greek
+keycode  51 =   comma           semicolon       VoidSymbol      VoidSymbol # # dead breve,   comma
+keycode  52 =   period          colon           VoidSymbol      VoidSymbol # # dead overdot, underdot
+keycode  53 =   minus           underscore      VoidSymbol      VoidSymbol # # dead macron,  undermacron
+            shift control keycode  53 = Control_underscore
+
+
+# Row 5: bottom.
+
+keycode  57 = space             space           U+00A0          U+00A0
+            control keycode  57 = nul
+
+
+# Modifiers, left side.
+
+keycode  42 = Shift
+keycode  29 = Control
+#keycode 125 = Gui
+keycode  56 = Alt
+
+
+# Modifiers, right side.
+
+keycode  54 = Shift
+keycode 199 = AltGr
+#keycode 126 = Gui
+keycode  97 = Control
+
+
+
+# DEAD_ACUTE
+#
+compose '\'' U+0041 to  U+00C1  # A -> Á
+compose '\'' U+0061 to  U+00E1  # a -> á
+compose '\'' U+00C6 to  U+01FC  # Æ -> Ǽ
+compose '\'' U+00E6 to  U+01FD  # æ -> ǽ
+compose '\'' U+0043 to  U+0106  # C -> C
+compose '\'' U+0063 to  U+0107  # c -> c
+compose '\'' U+00C7 to  U+1E08  # Ç -> Ḉ
+compose '\'' U+00E7 to  U+1E09  # ç -> ḉ
+compose '\'' U+0045 to  U+00C9  # E -> É
+compose '\'' U+0065 to  U+00E9  # e -> é
+compose '\'' U+0047 to  U+01F4  # G -> Ǵ
+compose '\'' U+0067 to  U+01F5  # g -> ǵ
+compose '\'' U+0049 to  U+00CD  # I -> Í
+compose '\'' U+0069 to  U+00ED  # i -> í
+compose '\'' U+004B to  U+1E30  # K -> Ḱ
+compose '\'' U+006B to  U+1E31  # k -> ḱ
+compose '\'' U+004C to  U+0139  # L -> L
+compose '\'' U+006C to  U+013A  # l -> l
+compose '\'' U+004D to  U+1E3E  # M -> Ḿ
+compose '\'' U+006D to  U+1E3F  # m -> ḿ
+compose '\'' U+004E to  U+0143  # N -> N
+compose '\'' U+006E to  U+0144  # n -> n
+compose '\'' U+004F to  U+00D3  # O -> Ó
+compose '\'' U+006F to  U+00F3  # o -> ó
+compose '\'' U+00D5 to  U+1E4C  # Õ -> Ṍ
+compose '\'' U+00F5 to  U+1E4D  # õ -> ṍ
+compose '\'' U+0050 to  U+1E54  # P -> Ṕ
+compose '\'' U+0070 to  U+1E55  # p -> ṕ
+compose '\'' U+0052 to  U+0154  # R -> R
+compose '\'' U+0072 to  U+0155  # r -> r
+compose '\'' U+0053 to  U+015A  # S -> S
+compose '\'' U+0073 to  U+015B  # s -> s
+compose '\'' U+0055 to  U+00DA  # U -> Ú
+compose '\'' U+0075 to  U+00FA  # u -> ú
+compose '\'' U+0168 to  U+1E78  # U -> Ṹ
+compose '\'' U+0169 to  U+1E79  # u -> ṹ
+compose '\'' U+0057 to  U+1E82  # W -> Ẃ
+compose '\'' U+0077 to  U+1E83  # w -> ẃ
+compose '\'' U+0059 to  U+00DD  # Y -> Ý
+compose '\'' U+0079 to  U+00FD  # y -> ý
+compose '\'' U+005A to  U+0179  # Z -> Z
+compose '\'' U+007A to  U+017A  # z -> z
+compose '\'' U+0031 to  U+0330  # 1 -> ̰
+compose '\'' U+0032 to  U+2363  # 2 -> ⍣
+compose '\'' U+0033 to  U+2368  # 3 -> ⍨
+compose '\'' U+0034 to  U+2369  # 4 -> ⍩
+compose '\'' U+0035 to  U+0CA0  # 5 -> ಠ
+compose '\'' U+0036 to  U+005F  # 6 -> _
+compose '\'' U+0037 to  U+25C9  # 7 -> ◉
+# mpose '\'' U+0038 to  U+FE4F  # 8 -> ﹏ # UNSUPPORTED
+compose '\'' U+0039 to  U+0CA5  # 9 -> ಥ
+compose '\'' U+0030 to  U+2800  # 0 -> ⠀
+compose '\'' U+003F to  U+232B  # ? -> ⌫
+compose '\'' U+0021 to  U+2326  # ! -> ⌦
+compose '\'' U+0022 to  U+00B4  # " -> ´
+compose '\'' U+0027 to  U+00B4  # ' -> ´
+compose '\'' U+00A0 to  U+0301  #   -> ´
+compose '\'' U+0020 to  U+0301  #   -> ´
+
+# DEAD_GRAVE
+#
+compose '`'  U+0041 to  U+00C0  # A -> À
+compose '`'  U+0061 to  U+00E0  # a -> à
+compose '`'  U+0045 to  U+00C8  # E -> È
+compose '`'  U+0065 to  U+00E8  # e -> è
+compose '`'  U+0049 to  U+00CC  # I -> Ì
+compose '`'  U+0069 to  U+00EC  # i -> ì
+compose '`'  U+004E to  U+01F8  # N -> Ǹ
+compose '`'  U+006E to  U+01F9  # n -> ǹ
+compose '`'  U+004F to  U+00D2  # O -> Ò
+compose '`'  U+006F to  U+00F2  # o -> ò
+compose '`'  U+0055 to  U+00D9  # U -> Ù
+compose '`'  U+0075 to  U+00F9  # u -> ù
+compose '`'  U+0057 to  U+1E80  # W -> Ẁ
+compose '`'  U+0077 to  U+1E81  # w -> ẁ
+compose '`'  U+0059 to  U+1EF2  # Y -> Ỳ
+compose '`'  U+0079 to  U+1EF3  # y -> ỳ
+compose '`'  U+0022 to  U+0060  # " -> `
+compose '`'  U+0027 to  U+0060  # ' -> `
+compose '`'  U+00A0 to  U+0300  #   -> `
+compose '`'  U+0020 to  U+0300  #   -> `
+
+# DEAD_DIAERESIS
+#
+compose '"'  U+0041 to  U+00C4  # A -> Ä
+compose '"'  U+0061 to  U+00E4  # a -> ä
+compose '"'  U+0045 to  U+00CB  # E -> Ë
+compose '"'  U+0065 to  U+00EB  # e -> ë
+compose '"'  U+0048 to  U+1E26  # H -> Ḧ
+compose '"'  U+0068 to  U+1E27  # h -> ḧ
+compose '"'  U+0049 to  U+00CF  # I -> Ï
+compose '"'  U+0069 to  U+00EF  # i -> ï
+compose '"'  U+004F to  U+00D6  # O -> Ö
+compose '"'  U+006F to  U+00F6  # o -> ö
+compose '"'  U+00D5 to  U+1E4E  # Õ -> Ṏ
+compose '"'  U+00F5 to  U+1E4F  # õ -> ṏ
+compose '"'  U+0074 to  U+1E97  # t -> ẗ
+compose '"'  U+0055 to  U+00DC  # U -> Ü
+compose '"'  U+0075 to  U+00FC  # u -> ü
+compose '"'  U+0057 to  U+1E84  # W -> Ẅ
+compose '"'  U+0077 to  U+1E85  # w -> ẅ
+compose '"'  U+0058 to  U+1E8C  # X -> Ẍ
+compose '"'  U+0078 to  U+1E8D  # x -> ẍ
+compose '"'  U+0059 to  U+0178  # Y -> Ÿ
+compose '"'  U+0079 to  U+00FF  # y -> ÿ
+compose '"'  U+0022 to  U+00A8  # " -> ¨
+compose '"'  U+0027 to  U+00A8  # ' -> ¨
+compose '"'  U+00A0 to  U+0308  #   -> ¨
+compose '"'  U+0020 to  U+0308  #   -> ¨
+
+# DEAD_CIRCUMFLEX
+#
+compose '^'  U+0041 to  U+00C2  # A -> Â
+compose '^'  U+0061 to  U+00E2  # a -> â
+compose '^'  U+0043 to  U+0108  # C -> C
+compose '^'  U+0063 to  U+0109  # c -> c
+compose '^'  U+0045 to  U+00CA  # E -> Ê
+compose '^'  U+0065 to  U+00EA  # e -> ê
+compose '^'  U+0047 to  U+011C  # G -> G
+compose '^'  U+0067 to  U+011D  # g -> g
+compose '^'  U+0048 to  U+0124  # H -> H
+compose '^'  U+0068 to  U+0125  # h -> h
+compose '^'  U+0049 to  U+00CE  # I -> Î
+compose '^'  U+0069 to  U+00EE  # i -> î
+compose '^'  U+004A to  U+0134  # J -> J
+compose '^'  U+006A to  U+0135  # j -> j
+compose '^'  U+004F to  U+00D4  # O -> Ô
+compose '^'  U+006F to  U+00F4  # o -> ô
+compose '^'  U+0053 to  U+015C  # S -> S
+compose '^'  U+0073 to  U+015D  # s -> s
+compose '^'  U+0055 to  U+00DB  # U -> Û
+compose '^'  U+0075 to  U+00FB  # u -> û
+compose '^'  U+0057 to  U+0174  # W -> W
+compose '^'  U+0077 to  U+0175  # w -> w
+compose '^'  U+0059 to  U+0176  # Y -> Y
+compose '^'  U+0079 to  U+0177  # y -> y
+compose '^'  U+005A to  U+1E90  # Z -> Ẑ
+compose '^'  U+007A to  U+1E91  # z -> ẑ
+compose '^'  U+0022 to  U+005E  # " -> ^
+compose '^'  U+0027 to  U+005E  # ' -> ^
+compose '^'  U+00A0 to  U+0302  #   -> ^
+compose '^'  U+0020 to  U+0302  #   -> ^
+
+# DEAD_TILDE
+#
+compose '~'  U+0041 to  U+00C3  # A -> Ã
+compose '~'  U+0061 to  U+00E3  # a -> ã
+compose '~'  U+00C3 to  U+00C3  # Ã -> Ã
+compose '~'  U+00E3 to  U+00E3  # ã -> ã
+compose '~'  U+0045 to  U+1EBC  # E -> Ẽ
+compose '~'  U+0065 to  U+1EBD  # e -> ẽ
+compose '~'  U+1EBC to  U+1EBC  # Ẽ -> Ẽ
+compose '~'  U+1EBD to  U+1EBD  # ẽ -> ẽ
+compose '~'  U+0049 to  U+0128  # I -> I
+compose '~'  U+0069 to  U+0129  # i -> i
+compose '~'  U+0128 to  U+0128  # Ĩ -> Ĩ
+compose '~'  U+0129 to  U+0129  # ĩ -> ĩ
+compose '~'  U+004E to  U+00D1  # N -> Ñ
+compose '~'  U+006E to  U+00F1  # n -> ñ
+compose '~'  U+00D1 to  U+00D1  # Ñ -> Ñ
+compose '~'  U+00F1 to  U+00F1  # ñ -> ñ
+compose '~'  U+004F to  U+00D5  # O -> Õ
+compose '~'  U+006F to  U+00F5  # o -> õ
+compose '~'  U+00D5 to  U+00D5  # Õ -> Õ
+compose '~'  U+00F5 to  U+00F5  # õ -> õ
+compose '~'  U+0055 to  U+0168  # U -> Ũ
+compose '~'  U+0075 to  U+0169  # u -> ũ
+compose '~'  U+0168 to  U+0168  # Ũ -> Ũ
+compose '~'  U+0169 to  U+0169  # ũ -> ũ
+compose '~'  U+0056 to  U+1E7C  # V -> Ṽ
+compose '~'  U+0076 to  U+1E7D  # v -> ṽ
+compose '~'  U+0059 to  U+1EF8  # Y -> Ỹ
+compose '~'  U+0079 to  U+1EF9  # y -> ỹ
+compose '~'  U+1EF8 to  U+1EF8  # Ỹ -> Ỹ
+compose '~'  U+1EF9 to  U+1EF9  # ỹ -> ỹ
+compose '~'  U+0022 to  U+007E  # " -> ~
+compose '~'  U+0027 to  U+007E  # ' -> ~
+compose '~'  U+00A0 to  U+0303  #   -> ~
+compose '~'  U+0020 to  U+0303  #   -> ~
+
+# DEAD_RING
+#
+compose '°'  U+0041 to  U+00C5  # A -> Å
+compose '°'  U+0061 to  U+00E5  # a -> å
+compose '°'  U+0055 to  U+016E  # U -> Ů
+compose '°'  U+0075 to  U+016F  # u -> ů
+compose '°'  U+0077 to  U+1E98  # w -> ẘ
+compose '°'  U+0079 to  U+1E99  # y -> ẙ
+compose '°'  U+0022 to  U+02DA  # " -> °
+compose '°'  U+0027 to  U+02DA  # ' -> °
+compose '°'  U+00A0 to  U+030A  #   -> °
+compose '°'  U+0020 to  U+030A  #   -> °
